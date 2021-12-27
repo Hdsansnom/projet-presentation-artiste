@@ -18,3 +18,126 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
+
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    align-items: center;
+    position: fixed;
+    background: gray;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    /* VH Viewport Heigth (% de hauteur) */
+    height: 10vh;
+    padding: 10px;
+    z-index: 10;
+}
+
+header div{
+    width: 20%;
+    
+    margin: 0px;
+}
+
+header div h1{
+    font-family:font-family : 'Mukta', sans-serif ;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 12px;
+
+    /* 
+     display: flex;
+    flex-direction: row;
+    padding: 12px;
+    */
+   
+    
+
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  
+   
+}
+
+nav ul li{
+    display: flex;
+    margin: 10px;
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #ffff;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif ;
+}
+
+/* section main */
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgrey;
+    border: 1px black solid;
+    width: 100%;
+    height: 90vh;
+    padding: 20px;
+    
+    
+}
+
+#first-row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 20px 0 20px;
+    padding: 50px;  
+}
+
+
+.title-second{
+
+}
+
+section#second-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px black solid;
+    background: darkgrey;
+    padding: 20px;
+    margin-top: 10px;
+ 
+}
+
+
+.col2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px black solid;
+    height: 380px;
+    flex: 1;
+    
+}
+
+img {
+    width: 250px
+}
+
+
+
+
+
+
