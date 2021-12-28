@@ -20,12 +20,14 @@ body{
 }
 
 header{
+    /* on applique le mode flex à ce conteneur */
     display: flex;
     justify-content: space-between;
     flex-flow: wrap;
     align-items: center;
     position: fixed;
     background: gray;
+    /* j'utilise 100% du parent donc de BODY */
     width: 100%;
     top: 0px;
     left: 0px;
@@ -33,61 +35,105 @@ header{
     height: 10vh;
     padding: 10px;
     z-index: 10;
+    box-shadow: 6px 6px 8px gray;
 }
-
+/* dimensione le bloc DIV qui contient le H1 */
 header div{
-    width: 20%;
-    
-    margin: 0px;
+    width: 22%;
+    height: 8vh;
+    margin: 0 0 0 0m;
 }
-
+/* je mets en forme le H1 du HEADER  */
 header div h1{
-    font-family:font-family : 'Mukta', sans-serif ;
+    font-family: 'Mukta', sans-serif ;
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: bolder;
+    margin: 0.4em 0 0 0;
+    color: whitesmoke;
 }
+/* je dimensionne et je positionne le bloc NAV */
 nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 12px;
+    width: 36%;
+    height: 8vh;
+    margin:0 0 0 0 ;
 
-    /* 
-     display: flex;
-    flex-direction: row;
-    padding: 12px;
-    */
-   
-    
 
 }
 
-nav ul{
+nav ul.navbar{  
+    list-style: none; 
+    margin: 1.2em 1em 0 1em;
     display: flex;
-    flex-direction: row;
-    list-style: none;
-  
-   
+    justify-content: space-around;
+
+
 }
 
 nav ul li{
-    display: flex;
-    margin: 10px;
+    display: inline;
+    padding: 12px;
+  
+    
+}
+/* mise en forme des elements A */
+nav ul li a{
+    text-decoration: none;   
+    font-family: 'Roboto', sans-serif ;
+    color: #ffff;
+    font-size: 1.2em;
+    font-weight: bolder;
+    margin: 0 0.2em 0 0.2em;
     
 }
 
-nav ul li a{
-    text-decoration: none;
-    color: #ffff;
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif ;
+/* pseudo element HOVER sur les elements A */
+
+nav ul li a:hover{
+    cursor: pointer;
+    background-color: whitesmoke;
+    color: black;
 }
 
-/* section main */
+/* section charte graphique */
+
+
+.fondbleu{
+    background-color: cadetblue;
+    border-radius: 3px;
+    border-width: 2px;
+    border-left-style: outset;
+    border-left-color: lightgrey;
+    border-top-style: outset;
+    border-top-color: lightgrey;
+    border-right-style: outset;
+    border-right-color: darkgrey;
+    border-top-style: outset;
+    border-top-color: darkgrey;
+}
+
+.fondclair{
+    background-color: cadetblue;
+    border-radius: 3px;
+    border-width: 2px;
+    border-left-style: outset;
+    border-left-color: lightgrey;
+    border-top-style: outset;
+    border-top-color: lightgrey;
+    border-right-style: outset;
+    border-right-color: darkgrey;
+    border-top-style: outset;
+    border-top-color: darkgrey;
+
+}
 
 main{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: darkgrey;
+    background:url(/image/main\ banner.jpg)100%;
+    background-size: cover;
+    background-repeat: no-repeat;
     border: 1px black solid;
     width: 100%;
     height: 90vh;
