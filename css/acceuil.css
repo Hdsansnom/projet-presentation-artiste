@@ -21,9 +21,7 @@ main section{
     width: 96%;
     height: 68vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    
-    
+    grid-template-columns: 1fr 1fr;   
 /* 
     display: flex;
     justify-content: space-around;
