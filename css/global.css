@@ -55,135 +55,265 @@ header div h1{
 /* je dimensionne et je positionne le bloc NAV */
 nav{
     width: 36%;
-    height: 8vh;
-    margin:0 0 0 0 ;
-
-
-}
-
-nav ul.navbar{  
-    list-style: none; 
-    margin: 1.2em 1em 0 1em;
     display: flex;
     justify-content: space-around;
-
-
 }
 
-nav ul li{
-    display: inline;
-    padding: 12px;
-  
-    
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.2em 0.2em 0.2em 0.2em;
 }
-/* mise en forme des elements A */
-nav ul li a{
-    text-decoration: none;   
-    font-family: 'Roboto', sans-serif ;
-    color: #ffff;
-    font-size: 1.2em;
+/* supression de la decoration du mode liste */
+.navbar li{
+    list-style: none;
+    margin:0 0.2em 0 0.2em;
+}
+
+/* Mise en forme des élements A href */
+/* leger écartement les uns des autres avec MARGIN */
+
+.navbar li a {
+    font-family : 'Roboto', sans-serif ;
+    text-decoration: none;
+    font-size: 1,8em;
     font-weight: bolder;
-    margin: 0 0.2em 0 0.2em;
+    color: whitesmoke;
+    margin: 0 0.8em 0 0;
+    line-height: 1,2em;
+       
+}
+
+/* Mise en forme du Label qui contient le symbole */
+/* Hamburger et léger positionnement avec MARGIN */
+header nav label{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: black;
+    margin: 0 1em 0 0;
+}
+
+/* changement de pointeur au passage de la souris */
+
+header nav label:hover {
+    cursor: pointer;
+}
+
+/* Par défaut le symbôle Hamburger est masqué */
+header nav label{
+    display: none; 
+}
+
+/* Ainsi que la case à cocher associée au LABEL */
+#myBurger{
+    display: none;
+
+}
+/* 
+.navbar{
+    display: none;
+}
+
+*/
+
+
+#myBurger:checked ~ .navbar{
+    display: block;
+}
+
+
+
+/** Section de gestion des medias queries */
+/*****************************************/
+/* Règles CSS pour les écrans inférieurs à 576px */
+@media (max-width: 576px) {
     
 }
 
-/* pseudo element HOVER sur les elements A */
+/* Règles CSS pour les écrans inférieurs à 768px */ 
+@media (max-width: 768px) {
 
-nav ul li a:hover{
+}
+
+/* Règles CSS pour les écrans inférieurs à 992px */ 
+@media (max-width: 992px){
+    #myLogo {
+        width: 36%;
+        margin: 0 0 0 1em;
+    }
+    #myLogo h1{
+        font-size: 1.4em;
+        line-height: 1.2em;
+        white-space: nowrap;
+    }
+    /* On masque le menu horizontal */
+    .navbar{
+        display: none;
+    }
+    /* On affiche le symbôle Hamburger à la place */
+    header nav label{
+        display: block;
+        box-sizing: border-box;
+        margin: 0 0 0 6em;
+    }
+    /* Gestion du survol de la souris */
+    header nav label:hover{
+        cursor: pointer;
+    }
+    /* Si myBurger est coché: on affiche le menu verticalement */
+    #myBurger[type=checkbox]:checked ~ .navbar{
+        display: block;
+        background-color: cadetblue;
+        width: 18%;
+        height: 22vh;
+        margin: 0 1em 1em 0;
+        position: absolute;
+        left: 76.4vw;
+        top: 9vh;
+    }
+
+    /* Les items du menu principal */
+    /* sont centrés en mode FLEX */
+    .navbar li{
+        flex-direction: column;
+        width: 12vw;
+        text-align: center;
+        margin: 0.6em 0 1.2em 0;
+    }
+    /* On modifie la mise en forme des A href */
+    .navbar li a{
+        margin: 0 0 2em 0;
+    }
+    /* Animation survol de la souris sur */
+    /* items du menu vertical */
+    .navbar li a:hover{
+        cursor: pointer;
+        background-color: whitesmoke;
+        color: cadetblue;
+    }
+}
+
+/* Règles CSS pour les écrans inférieurs à 1200px */ 
+@media (max-width: 1200px) {
+
+}
+
+
+
+
+
+
+
+/* mise en forme du FOOTER */
+
+footer{
+    box-sizing: border-box;
+    position: fixed;
+/* J'utilise 100 % du parent donc de BODY */
+    width: 100%;
+    top: 84.4vh;
+    left: 0px;
+/* VH Viewport Heigth (% de hauteur) */
+    height: 15.6vh;
+    background-color:grey;
+    box-shadow: -6px -6px 8px gray;
+    z-index: 10;
+/* On applique le mode flex à ce conteneur */
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+    align-items: center;
+} 
+
+
+
+
+footer section{
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    width: 46%;
+    height: 4.8vh;
+    margin: 4px 10px 4px 10px;
+}
+
+footer section p{
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    left: 25%;
+    top: -5vh;
+/* bottom: 5vh; */
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 1em;
+    font-weight: bolder;
+    line-height: 0.8em;
+/* Provisoire 
+border: 1px solid black; */
+}
+
+footer section span{
+    position: relative;
+    display: block;
+    top: 0.2vh;
+    left: 1%;
+    width: 1.6vw;
+    height: 2vh;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 0.4em;
+    margin: 2px 0 2px 0;
+    padding: 7px 0 0 0;
+    color: whitesmoke;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+footer section span:hover{
     cursor: pointer;
     background-color: whitesmoke;
-    color: black;
-}
-
-/* section charte graphique */
-
+    color: cadetblue;
+    }
 
 .fondbleu{
-    background-color: cadetblue;
+    background-color:grey;
     border-radius: 3px;
     border-width: 2px;
     border-left-style: outset;
-    border-left-color: lightgrey;
+    border-left-color: lightgray;
     border-top-style: outset;
-    border-top-color: lightgrey;
+    border-top-color: lightgray;
     border-right-style: outset;
     border-right-color: darkgrey;
-    border-top-style: outset;
-    border-top-color: darkgrey;
+    border-bottom-style: outset;
+    border-bottom-color: darkgrey; 
 }
-
+.menuFondBleu{
+    background-color: cadetblue;
+    border-radius: 3px;
+    border-width: 2px;
+}
 .fondclair{
-    background-color: cadetblue;
+    background-color: whitesmoke;
     border-radius: 3px;
     border-width: 2px;
     border-left-style: outset;
-    border-left-color: lightgrey;
+    border-left-color: lightgray;
     border-top-style: outset;
-    border-top-color: lightgrey;
+    border-top-color: lightgray;
     border-right-style: outset;
     border-right-color: darkgrey;
-    border-top-style: outset;
-    border-top-color: darkgrey;
-
+    border-bottom-style: outset;
+    border-bottom-color: darkgrey; 
 }
-
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background:url(/image/main\ banner.jpg)100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: 1px black solid;
-    width: 100%;
-    height: 90vh;
-    padding: 20px;
-    
-    
+.menuFondClair{
+    background-color: whitesmoke;
+    border-radius: 3px;
+    border-width: 2px;
 }
-
-#first-row{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0 20px 0 20px;
-    padding: 50px;  
-}
-
-
-.title-second{
-
-}
-
-section#second-row{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px black solid;
-    background: darkgrey;
-    padding: 20px;
-    margin-top: 10px;
- 
-}
-
-
-.col2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 1px black solid;
-    height: 380px;
-    flex: 1;
-    
-}
-
-img {
-    width: 250px
-}
-
-
-
-
-
-

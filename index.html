@@ -6,27 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>présentation artiste</title>
     <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/acceuil.css">
 </head>
 <body>
     <header>
-        <div>
+        <div id="mylogo">
         <h1> Method man</h1>   
         </div>
         
     <nav>
+        
+        <label for="myBurger">☰</label>
+        <input type="checkbox" id="myBurger" name="myBurger">
             <ul class="navbar">
-                <li><a href="#">accueil</a></li>
-                <li><a href="#">présentation</a></li>
-                <li><a href="#">Discographie</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a class="navbar_banner" href="#">accueil</a></li>
+                <li><a class="navbar_banner" href="présentation.html">présentation</a></li>
+                <li><a class="navbar_banner" href="discographie.html">Discographie</a></li>
+                <li><a class="navbar_banner" href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="principale">
   
-    <section id="first-row">
-        <article class="col2">
+    <section class="fondbleu">
+        <article class="article-first fondclair" >
             <h2 class="title-second">Son parcours</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error in suscipit ipsam magni assumenda, praesentium.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem aliquid amet, labore recusandae illum possimus ex, architecto velit veritatis provident non necessitatibus, vero omnis commodi quasi quam quas distinctio nostrum?
@@ -36,27 +40,36 @@
             </p>
         </article>
         
-        <article class="col2">
-            <h2 class="title-second"> Method man</h2>
+        <article class="article-first fondclair" >
+            <h2 class="title-little"> Method man</h2>
             <img src="./image/method man.jpg" alt="photo method man">
          </article>
-    </section>
 
-    
-    
-</main>
-
-<section id="second-row">
-        <article>
+        <article class="article-second fondclair">
             <p>ce que j'aime chez method man</p>
         </article>
 
-</section>
+    </section>
+
    
-        
+</main>
+
+       
 
 <footer>
-        <p>mention legale</p>
+    <section class="fondclair"> 
+       <span class="fondbleu">+</span><p>mention legale</p>
+    </section>
+    <section class="fondclair"> 
+        <span class="fondbleu">+</span><p>Cookies</p>
+     </section>
+     <section class="fondclair"> 
+        <span class="fondbleu">+</span><p>RGPD</p>
+     </section>
+     <section class="fondclair"> 
+        <span class="fondbleu">+</span><p>Donnée personnel</p>
+     </section>
+        
 </footer>
     
 </body>
